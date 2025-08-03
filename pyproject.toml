@@ -1,0 +1,11 @@
+[project]
+name = "briefly"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+    "markitdown[docx,pdf,pptx,xls,xlsx]>=0.1.2",
+    "uvicorn>=0.35.0",
+]
