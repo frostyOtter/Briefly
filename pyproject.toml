@@ -5,7 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "baml-py>=0.204.0",
     "fastapi[standard]>=0.116.1",
+    "loguru>=0.7.3",
     "markitdown[docx,pdf,pptx,xls,xlsx]>=0.1.2",
     "uvicorn>=0.35.0",
 ]

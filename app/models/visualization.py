@@ -3,15 +3,18 @@ from pydantic import BaseModel, Field
 from typing import Optional, List, Literal
 from enum import Enum
 
+
 class DiagramType(str, Enum):
     FLOWCHART = "flowchart"
     SEQUENCE = "sequence"
+
 
 class VisualizationRequest(BaseModel):
     analysis_id: str
     diagram_type: DiagramType
     include_details: bool = True
     theme: Optional[str] = "default"
+
 
 class CustomVisualizationRequest(BaseModel):
     analysis_id: str
@@ -20,6 +23,7 @@ class CustomVisualizationRequest(BaseModel):
     highlight_modules: Optional[List[str]] = None
     theme: Optional[str] = "default"
     direction: Optional[Literal["TB", "BT", "LR", "RL"]] = "TB"  # For flowcharts
+
 
 class VisualizationResponse(BaseModel):
     analysis_id: str
